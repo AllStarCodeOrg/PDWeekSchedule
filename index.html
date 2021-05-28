@@ -45,11 +45,10 @@
         const day5Links = document.querySelectorAll(
           '.day-5 > .card-action > a'
         );
+        const allLinks = document.querySelectorAll('.all-links');
         let now = new Date();
         let today = now.getDate();
         let thisMonth = now.getMonth();
-        console.log(today, thisMonth);
-        // console.log((today !== 16 && thisMonth !== 5));
 
         if (thisMonth === 5 || thisMonth === 6) {
           if (thisMonth === 5) {
@@ -79,6 +78,12 @@
             }
           }
         }
+        let lastDay = new Date('07/02/2021');
+
+        if (now < lastDay) {
+          delNodes(allLinks);
+        }
+
         if (thisMonth < 6 && thisMonth !== 5) {
           delNodes(day1Links);
           delNodes(day2Links);

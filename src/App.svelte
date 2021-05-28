@@ -9,10 +9,10 @@
   function init() {
     const lastChose = window.localStorage.getItem('lastChose');
     if (lastChose !== undefined) {
-      if(lastChose === 'LITATF') {
+      if (lastChose === 'LITATF') {
         return;
       }
-      if(lastChose === 'SIC') {
+      if (lastChose === 'SIC') {
         SICSchedule.classList.toggle('hidden');
         LITATFSchedule.classList.toggle('hidden');
       }
@@ -44,19 +44,19 @@
 <main class="container">
   <div class="row">
     <div class="col s12 center">
-      <h1 class="title">All Star Code PD Week Schedule</h1>
-      <img
-        id="titleAsterik"
-        class="col s4 offset-s5"
-        src={asterik}
-        alt="ASC Asterik"
-      />
+      <div class="title mainheader">All Star Code PD Week Schedule</div>
     </div>
   </div>
   <div class="button-cont">
     <button class="waves-effect waves-light btn" on:click={LITATFClicked}
       >LI/TA/TF</button
     >
+    <img
+      id="titleAsterik"
+      class="col s4 offset-s5"
+      src={asterik}
+      alt="ASC Asterik"
+    />
     <button class="waves-effect waves-light btn" on:click={SICClicked}
       >SIC</button
     >

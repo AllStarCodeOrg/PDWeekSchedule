@@ -174,7 +174,7 @@
       </li>
     {/each}
   {/if}
-  <li>
+  <li class="all-links">
     <div class="collapsible-header">
       <h2 class="title">All PD Materials</h2>
     </div>
