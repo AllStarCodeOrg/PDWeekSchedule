@@ -2,19 +2,50 @@
   import asterik from './assets/ASC_ASTERIK.svg';
   import LITATF from './LITATF.svelte';
   import SIC from './SIC.svelte';
+  import anime from 'animejs';
 
   let LITATFSchedule: HTMLDivElement;
   let SICSchedule: HTMLDivElement;
+
+  const animateLITATF = () => {
+    const allListItems = document.querySelectorAll(
+      '#LITATFCont > ul.collapsible > li'
+    );
+    anime({
+      targets: allListItems,
+      translateY: [250, 0],
+      opacity: [0, 1],
+      easing: 'easeInOutExpo',
+      duration: 500,
+      delay: anime.stagger(150),
+    });
+  };
+
+  const animateSIC = () => {
+    const allListItems = document.querySelectorAll(
+      '#SICCont > ul.collapsible > li'
+    );
+    anime({
+      targets: allListItems,
+      translateY: [250, 0],
+      opacity: [0, 1],
+      easing: 'easeInOutExpo',
+      duration: 500,
+      delay: anime.stagger(150),
+    });
+  };
 
   function init() {
     const lastChose = window.localStorage.getItem('lastChose');
     if (lastChose !== undefined) {
       if (lastChose === 'LITATF') {
+        animateLITATF();
         return;
       }
       if (lastChose === 'SIC') {
         SICSchedule.classList.toggle('hidden');
         LITATFSchedule.classList.toggle('hidden');
+        animateSIC();
       }
     }
   }
@@ -24,6 +55,7 @@
       LITATFSchedule.classList.toggle('hidden');
       SICSchedule.classList.toggle('hidden');
       window.localStorage.setItem('lastChose', 'LITATF');
+      animateLITATF();
     }
   };
 
@@ -32,6 +64,7 @@
       SICSchedule.classList.toggle('hidden');
       LITATFSchedule.classList.toggle('hidden');
       window.localStorage.setItem('lastChose', 'SIC');
+      animateSIC();
     }
   };
 
