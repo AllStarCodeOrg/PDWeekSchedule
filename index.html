@@ -48,33 +48,43 @@
         let now = new Date();
         let today = now.getDate();
         let thisMonth = now.getMonth();
-        // console.log(today, thisMonth);
+        console.log(today, thisMonth);
         // console.log((today !== 16 && thisMonth !== 5));
 
-        if (thisMonth === 5) {
-          if (today < 22) {
-            delNodes(day1Links);
-            delNodes(day2Links);
-            delNodes(day3Links);
-            delNodes(day4Links);
-            delNodes(day5Links);
-          } else if (today < 23) {
-            delNodes(day2Links);
-            delNodes(day3Links);
-            delNodes(day4Links);
-            delNodes(day5Links);
-          } else if (today < 24) {
-            delNodes(day3Links);
-            delNodes(day4Links);
-            delNodes(day5Links);
-          } else if (today < 25) {
-            delNodes(day4Links);
-            delNodes(day5Links);
-          } else if (today < 26) {
-            delNodes(day5Links);
-          } else {
-            // do nothing
+        if (thisMonth === 5 || thisMonth === 6) {
+          if (thisMonth === 5) {
+            if (today < 28) {
+              delNodes([
+                ...day1Links,
+                ...day2Links,
+                ...day3Links,
+                ...day4Links,
+                ...day5Links,
+              ]);
+            } else if (today < 29) {
+              delNodes([
+                ...day2Links,
+                ...day3Links,
+                ...day4Links,
+                ...day5Links,
+              ]);
+            } else if (today < 30) {
+              delNodes([...day3Links, ...day4Links, ...day5Links]);
+            } else if (today === 30) {
+              delNodes([...day4Links, ...day5Links]);
+            }
+          } else if (thisMonth === 6) {
+            if (today === 1) {
+              delNodes(day5Links);
+            }
           }
+        }
+        if (thisMonth < 6 && thisMonth !== 5) {
+          delNodes(day1Links);
+          delNodes(day2Links);
+          delNodes(day3Links);
+          delNodes(day4Links);
+          delNodes(day5Links);
         }
 
         const activities = document.querySelectorAll(

@@ -200,3 +200,14 @@ ul.collection > li.collection-item > a {
 .gen-link {
   padding: 0rem 0.25rem;
 }
+
+.button-cont {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button-cont > button {
+  background-color: #147da3;
+  font-weight: bold;
+}
