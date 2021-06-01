@@ -33,67 +33,67 @@
           await nList.forEach((n) => n.remove());
         }
 
-        // const day1Links = document.querySelectorAll(
-        //   '.day-1 > .card-action > a'
-        // );
-        // const day2Links = document.querySelectorAll(
-        //   '.day-2 > .card-action > a'
-        // );
-        // const day3Links = document.querySelectorAll(
-        //   '.day-3 > .card-action > a'
-        // );
-        // const day4Links = document.querySelectorAll(
-        //   '.day-4 > .card-action > a'
-        // );
-        // const day5Links = document.querySelectorAll(
-        //   '.day-5 > .card-action > a'
-        // );
-        // const allLinks = document.querySelectorAll('.all-links');
-        // let now = new Date();
-        // let today = now.getDate();
-        // let thisMonth = now.getMonth();
+        const day1Links = document.querySelectorAll(
+          '.day-1 > .card-action > a'
+        );
+        const day2Links = document.querySelectorAll(
+          '.day-2 > .card-action > a'
+        );
+        const day3Links = document.querySelectorAll(
+          '.day-3 > .card-action > a'
+        );
+        const day4Links = document.querySelectorAll(
+          '.day-4 > .card-action > a'
+        );
+        const day5Links = document.querySelectorAll(
+          '.day-5 > .card-action > a'
+        );
+        const allLinks = document.querySelectorAll('.all-links');
+        let now = new Date();
+        let today = now.getDate();
+        let thisMonth = now.getMonth();
 
-        // if (thisMonth === 5 || thisMonth === 6) {
-        //   if (thisMonth === 5) {
-        //     if (today < 28) {
-        //       delNodes([
-        //         ...day1Links,
-        //         ...day2Links,
-        //         ...day3Links,
-        //         ...day4Links,
-        //         ...day5Links,
-        //       ]);
-        //     } else if (today < 29) {
-        //       delNodes([
-        //         ...day2Links,
-        //         ...day3Links,
-        //         ...day4Links,
-        //         ...day5Links,
-        //       ]);
-        //     } else if (today < 30) {
-        //       delNodes([...day3Links, ...day4Links, ...day5Links]);
-        //     } else if (today === 30) {
-        //       delNodes([...day4Links, ...day5Links]);
-        //     }
-        //   } else if (thisMonth === 6) {
-        //     if (today === 1) {
-        //       delNodes(day5Links);
-        //     }
-        //   }
-        // }
-        // let lastDay = new Date('07/02/2021');
+        if (thisMonth === 5 || thisMonth === 6) {
+          if (thisMonth === 5) {
+            if (today < 28) {
+              delNodes([
+                ...day1Links,
+                ...day2Links,
+                ...day3Links,
+                ...day4Links,
+                ...day5Links,
+              ]);
+            } else if (today < 29) {
+              delNodes([
+                ...day2Links,
+                ...day3Links,
+                ...day4Links,
+                ...day5Links,
+              ]);
+            } else if (today < 30) {
+              delNodes([...day3Links, ...day4Links, ...day5Links]);
+            } else if (today === 30) {
+              delNodes([...day4Links, ...day5Links]);
+            }
+          } else if (thisMonth === 6) {
+            if (today === 1) {
+              delNodes(day5Links);
+            }
+          }
+        }
+        let lastDay = new Date('07/02/2021');
 
-        // if (now < lastDay) {
-        //   delNodes(allLinks);
-        // }
+        if (now < lastDay) {
+          delNodes(allLinks);
+        }
 
-        // if (thisMonth < 6 && thisMonth !== 5) {
-        //   delNodes(day1Links);
-        //   delNodes(day2Links);
-        //   delNodes(day3Links);
-        //   delNodes(day4Links);
-        //   delNodes(day5Links);
-        // }
+        if (thisMonth < 6 && thisMonth !== 5) {
+          delNodes(day1Links);
+          delNodes(day2Links);
+          delNodes(day3Links);
+          delNodes(day4Links);
+          delNodes(day5Links);
+        }
 
         const activities = document.querySelectorAll(
           '.sched-item > .card-content'
