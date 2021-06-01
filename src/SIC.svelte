@@ -563,10 +563,27 @@
       <li>
         <div
           id={`day-${day.daynum}-header`}
-          class="collapsible-header"
+          class="collapsible-header title"
           data-state="closed"
         >
-          <h2 class="title">{day.title}</h2>
+          <span class="titleFix">{day.title}</span>
+          <span class="dayofWeek"
+            >&nbsp;
+            {#if day.daynum === '1'}
+              Mon
+            {:else if day.daynum === '2'}
+              Tues
+            {:else if day.daynum === '3'}
+              Weds
+            {:else if day.daynum === '4'}
+              Thurs
+            {:else if day.daynum === '5'}
+              Fri
+            {/if}
+          </span>
+          <span>&nbsp; - Day {day.daynum}</span>
+          <!-- <h2 class="title">
+        </h2> -->
         </div>
         <div class="collapsible-body">
           {#each day.activities as activity}
