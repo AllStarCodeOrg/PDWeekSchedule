@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite",
     "start": "yarn clean && yarn build && yarn serve",
-    "build": "vite build",
+    "build": "yarn clean && vite build",
     "serve": "vite preview",
     "clean": "rimraf docs/"
   },
