@@ -12,6 +12,9 @@ body {
   font-size: 48px;
   font-weight: bold;
   margin-top: 2.5rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .title {
@@ -153,11 +156,26 @@ li {
 .collapsible-header {
   background-color: #121212;
   position: relative;
+  font-size: 2.75rem;
 }
 
 .collapsible-body {
   position: relative;
   background-color: #121212;
+}
+
+.collapsible-header.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.titleFix {
+  width: 200px;
+}
+
+.dayofWeek {
+  width: 125px;
 }
 
 .collapsible-body::before {
@@ -189,6 +207,7 @@ li {
   height: 75px;
   width: 75px;
   position: relative;
+  margin-right: 20px;
 }
 
 ul.collection > li.collection-item:last-child {
@@ -223,9 +242,16 @@ ul.collection > li.collection-item > a {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 35px;
 }
 
 .button-cont > button {
   background-color: #147da3;
   font-weight: bold;
+  font-size: 18px;
+  width: 232px;
+}
+
+.all-links:nth-child(2) {
+  font-size: 2.75rem;
 }

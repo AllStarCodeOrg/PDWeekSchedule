@@ -77,21 +77,20 @@
 <main class="container">
   <div class="row">
     <div class="col s12 center">
-      <div class="title mainheader">All Star Code PD Week Schedule</div>
+      <div class="title mainheader">
+        <img id="titleAsterik" src={asterik} alt="ASC Asterik" />
+        All Star Code PD Week Schedule
+      </div>
     </div>
   </div>
+  <!-- <div class="click-text center">Click the buttons below to get your schedule</div> -->
   <div class="button-cont">
-    <button class="waves-effect waves-light btn" on:click={LITATFClicked}
-      >LI/TA/TF</button
+    <button
+      class="waves-effect waves-light btn btn-large"
+      on:click={LITATFClicked}>LI/TA/TF Schedule</button
     >
-    <img
-      id="titleAsterik"
-      class="col s4 offset-s5"
-      src={asterik}
-      alt="ASC Asterik"
-    />
-    <button class="waves-effect waves-light btn" on:click={SICClicked}
-      >SIC</button
+    <button class="waves-effect waves-light btn btn-large" on:click={SICClicked}
+      >SIC schedule</button
     >
   </div>
   <ul class="collapsible">

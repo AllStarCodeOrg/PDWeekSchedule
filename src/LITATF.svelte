@@ -5,7 +5,7 @@
   const data = [
     {
       daynum: '1',
-      title: 'June 28th',
+      title: 'June 28th,',
       activities: [
         {
           name: 'Welcome to PD Week',
@@ -147,7 +147,7 @@
     },
     {
       daynum: '2',
-      title: 'June 29th',
+      title: 'June 29th,',
       activities: [
         {
           name: 'First Peek at Remote Teaching',
@@ -254,7 +254,7 @@
     },
     {
       daynum: '3',
-      title: 'June 30th',
+      title: 'June 30th,',
       activities: [
         {
           name: 'Team Building',
@@ -354,7 +354,7 @@
     },
     {
       daynum: '4',
-      title: 'July 1st',
+      title: 'July 1st,',
       activities: [
         {
           name: 'Team Building',
@@ -461,7 +461,7 @@
     },
     {
       daynum: '5',
-      title: 'July 2nd',
+      title: 'July 2nd,',
       activities: [
         {
           name: 'Team Building',
@@ -574,10 +574,27 @@
     <li>
       <div
         id={`day-${day.daynum}-header`}
-        class="collapsible-header"
+        class="collapsible-header title"
         data-state="closed"
       >
-        <h2 class="title">{day.title}</h2>
+        <span class="titleFix">{day.title}</span>
+        <span class="dayofWeek"
+          >&nbsp;
+          {#if day.daynum === '1'}
+            Mon
+          {:else if day.daynum === '2'}
+            Tues
+          {:else if day.daynum === '3'}
+            Weds
+          {:else if day.daynum === '4'}
+            Thurs
+          {:else if day.daynum === '5'}
+            Fri
+          {/if}
+        </span>
+        <span>&nbsp; - Day {day.daynum}</span>
+        <!-- <h2 class="title">
+        </h2> -->
       </div>
       <div class="collapsible-body">
         {#each day.activities as activity}
@@ -595,7 +612,7 @@
   {/each}
   <li class="all-links">
     <div class="collapsible-header">
-      <h2 class="title">All PD Materials</h2>
+      <div class="title">All PD Materials</div>
     </div>
     <div class="collapsible-body">
       <ul class="collection">
