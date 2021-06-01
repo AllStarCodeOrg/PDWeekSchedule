@@ -5,7 +5,7 @@
   const data = [
     {
       daynum: '1',
-      title: 'June 28th',
+      title: 'June 28th,',
       activities: [
         {
           name: 'Welcome to PD Week',

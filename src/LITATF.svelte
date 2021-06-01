@@ -5,7 +5,7 @@
   const data = [
     {
       daynum: '1',
-      title: 'June 28th - Monday',
+      title: 'June 28th,',
       activities: [
         {
           name: 'Welcome to PD Week',
@@ -147,7 +147,7 @@
     },
     {
       daynum: '2',
-      title: 'June 29th - Tuesday',
+      title: 'June 29th,',
       activities: [
         {
           name: 'First Peek at Remote Teaching',
@@ -251,7 +251,7 @@
     },
     {
       daynum: '3',
-      title: 'June 30th - Wednesday',
+      title: 'June 30th,',
       activities: [
         {
           name: 'Team Building',
@@ -348,7 +348,7 @@
     },
     {
       daynum: '4',
-      title: 'July 1st - Thursday',
+      title: 'July 1st,',
       activities: [
         {
           name: 'Team Building',
@@ -452,7 +452,7 @@
     },
     {
       daynum: '5',
-      title: 'July 2nd - Friday',
+      title: 'July 2nd,',
       activities: [
         {
           name: 'Team Building',
