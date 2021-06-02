@@ -14,7 +14,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <link rel="stylesheet" href="/PDWeekSchedule/styles/style.css" />
-  <script type="module" crossorigin src="/PDWeekSchedule/assets/index.b1bf273a.js"></script>
+  <script type="module" crossorigin src="/PDWeekSchedule/assets/index.f1c504f5.js"></script>
   <link rel="modulepreload" href="/PDWeekSchedule/assets/vendor.0a1cc01f.js">
 </head>
   <body>
@@ -48,51 +48,78 @@
         const day5Links = document.querySelectorAll(
           '.day-5 > .card-action > a'
         );
+
+        const allMatsDay1Links = document.querySelectorAll('.day1-all-links');
+        const allMatsDay2Links = document.querySelectorAll('.day2-all-links');
+        const allMatsDay3Links = document.querySelectorAll('.day3-all-links');
+        const allMatsDay4Links = document.querySelectorAll('.day4-all-links');
+        const allMatsDay5Links = document.querySelectorAll('.day5-all-links');
+
         const allLinks = document.querySelectorAll('.all-links');
         let now = new Date();
         let today = now.getDate();
         let thisMonth = now.getMonth();
 
-        if (thisMonth === 5 || thisMonth === 6) {
-          if (thisMonth === 5) {
-            if (today < 28) {
-              delNodes([
-                ...day1Links,
-                ...day2Links,
-                ...day3Links,
-                ...day4Links,
-                ...day5Links,
-              ]);
-            } else if (today < 29) {
-              delNodes([
-                ...day2Links,
-                ...day3Links,
-                ...day4Links,
-                ...day5Links,
-              ]);
-            } else if (today < 30) {
-              delNodes([...day3Links, ...day4Links, ...day5Links]);
-            } else if (today === 30) {
-              delNodes([...day4Links, ...day5Links]);
-            }
-          } else if (thisMonth === 6) {
-            if (today === 1) {
-              delNodes(day5Links);
-            }
-          }
-        }
-        let lastDay = new Date('07/02/2021');
+        // const day1Date = new Date(2021, 5, 2, 15, 18);
+        // const day2Date = new Date(2021, 5, 2, 15, 19);
+        // const day3Date = new Date(2021, 5, 2, 15, 20);
+        // const day4Date = new Date(2021, 5, 2, 15, 21);
+        // const day5Date = new Date(2021, 5, 2, 15, 22);
+        const day1Date = new Date(2021, 5, 28);
+        const day2Date = new Date(2021, 5, 29);
+        const day3Date = new Date(2021, 5, 30);
+        const day4Date = new Date(2021, 6, 1);
+        const day5Date = new Date(2021, 6, 2);
 
-        if (now < lastDay) {
-          delNodes(allLinks);
-        }
-
-        if (thisMonth < 6 && thisMonth !== 5) {
-          delNodes(day1Links);
-          delNodes(day2Links);
-          delNodes(day3Links);
-          delNodes(day4Links);
-          delNodes(day5Links);
+        if (now < day1Date) {
+          // console.log("It's not day one, deleting all links...");
+          delNodes([
+            ...day1Links,
+            ...day2Links,
+            ...day3Links,
+            ...day4Links,
+            ...day5Links,
+            ...allMatsDay1Links,
+            ...allMatsDay2Links,
+            ...allMatsDay3Links,
+            ...allMatsDay4Links,
+            ...allMatsDay5Links,
+          ]);
+        } else if (now < day2Date) {
+          // console.log("It's not day 2 deleting day 2+");
+          delNodes([
+            ...day2Links,
+            ...day3Links,
+            ...day4Links,
+            ...day5Links,
+            ...allMatsDay2Links,
+            ...allMatsDay3Links,
+            ...allMatsDay4Links,
+            ...allMatsDay5Links,
+          ]);
+        } else if (now < day3Date) {
+          // console.log("It's not day 3 deleting day 3+");
+          delNodes([
+            ...day3Links,
+            ...day4Links,
+            ...day5Links,
+            ...allMatsDay3Links,
+            ...allMatsDay4Links,
+            ...allMatsDay5Links,
+          ]);
+        } else if (now < day4Date) {
+          // console.log("It's not day 4 deleting day 4+");
+          delNodes([
+            ...day4Links,
+            ...day5Links,
+            ...allMatsDay4Links,
+            ...allMatsDay5Links,
+          ]);
+        } else if (now < day5Date) {
+          // console.log("It's not day 5 deleting day 5+");
+          delNodes([...day5Links, ...allMatsDay5Links]);
+        } else {
+          console.log("It's day 5 not deleting anything");
         }
 
         const activities = document.querySelectorAll(
