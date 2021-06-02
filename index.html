@@ -46,6 +46,13 @@
         const day5Links = document.querySelectorAll(
           '.day-5 > .card-action > a'
         );
+
+        const allMatsDay1Links = document.querySelectorAll('.day1-all-links');
+        const allMatsDay2Links = document.querySelectorAll('.day2-all-links');
+        const allMatsDay3Links = document.querySelectorAll('.day3-all-links');
+        const allMatsDay4Links = document.querySelectorAll('.day4-all-links');
+        const allMatsDay5Links = document.querySelectorAll('.day5-all-links');
+
         const allLinks = document.querySelectorAll('.all-links');
         let now = new Date();
         let today = now.getDate();
@@ -60,6 +67,11 @@
                 ...day3Links,
                 ...day4Links,
                 ...day5Links,
+                ...allMatsDay1Links,
+                ...allMatsDay2Links,
+                ...allMatsDay3Links,
+                ...allMatsDay4Links,
+                ...allMatsDay5Links,
               ]);
             } else if (today < 29) {
               delNodes([
@@ -67,23 +79,39 @@
                 ...day3Links,
                 ...day4Links,
                 ...day5Links,
+                ...allMatsDay2Links,
+                ...allMatsDay3Links,
+                ...allMatsDay4Links,
+                ...allMatsDay5Links,
               ]);
             } else if (today < 30) {
-              delNodes([...day3Links, ...day4Links, ...day5Links]);
+              delNodes([
+                ...day3Links,
+                ...day4Links,
+                ...day5Links,
+                ...allMatsDay3Links,
+                ...allMatsDay4Links,
+                ...allMatsDay5Links,
+              ]);
             } else if (today === 30) {
-              delNodes([...day4Links, ...day5Links]);
+              delNodes([
+                ...day4Links,
+                ...day5Links,
+                ...allMatsDay4Links,
+                ...allMatsDay5Links,
+              ]);
             }
           } else if (thisMonth === 6) {
             if (today === 1) {
-              delNodes(day5Links);
+              delNodes([...day5Links, ...allMatsDay5Links]);
             }
           }
         }
         let lastDay = new Date('07/02/2021');
 
-        if (now < lastDay) {
-          delNodes(allLinks);
-        }
+        // if (now < lastDay) {
+        //   delNodes(allLinks);
+        // }
 
         if (thisMonth < 6 && thisMonth !== 5) {
           delNodes(day1Links);

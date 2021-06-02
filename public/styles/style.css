@@ -162,7 +162,6 @@ li {
 }
 
 .collapsible {
-  /* box-shadow: -1px 10px 10px 1px rgba(0, 0, 0, 0.56); */
   box-shadow: none;
 }
 
@@ -189,13 +188,13 @@ li {
   align-items: flex-start;
 }
 
-.titleFix {
+/* .titleFix {
   width: 200px;
 }
 
 .dayofWeek {
   width: 125px;
-}
+} */
 
 .collapsible-body::before {
   background-color: rgba(255, 255, 255, 0.08);
@@ -282,6 +281,9 @@ ul.collection > li.collection-item > a {
   margin-bottom: 10px;
   margin-left: 10px;
   font-weight: bold;
+  background-color: #147da3;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .chosen {

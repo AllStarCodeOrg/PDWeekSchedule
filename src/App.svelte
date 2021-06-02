@@ -13,30 +13,13 @@
     );
     anime({
       targets: allListItems,
-      clipPath: ['inset(0 0 0 0)', 'inset(0 100% 0 0)'],
-      // keyframes: [
-      //   { clipPath: 'inset(0 0 0 0)' },
-      //   { clipPath: 'inset(0 100% 0 0)' },
-      // ],
-      direction: 'reverse',
+      translateY: [250, 0],
+      opacity: [0, 1],
       easing: 'easeInOutExpo',
-      duration: 1000,
+      duration: 500,
       delay: anime.stagger(150),
     });
   };
-  // const animateLITATF = () => {
-  //   const allListItems = document.querySelectorAll(
-  //     '#LITATFCont > ul.collapsible > li'
-  //   );
-  //   anime({
-  //     targets: allListItems,
-  //     translateY: [250, 0],
-  //     opacity: [0, 1],
-  //     easing: 'easeInOutExpo',
-  //     duration: 500,
-  //     delay: anime.stagger(150),
-  //   });
-  // };
 
   const animateSIC = () => {
     const allListItems = document.querySelectorAll(

@@ -5,7 +5,7 @@
   const data = [
     {
       daynum: '1',
-      title: 'June 28th,',
+      title: 'June 28th',
       activities: [
         {
           name: 'Welcome to PD Week',
@@ -133,7 +133,7 @@
           name: 'Exit Survey',
           time: '05:15PM - 05:30PM',
           duration: '15',
-          actType: 'coreskill',
+          actType: 'survey',
           links: [],
         },
         {
@@ -147,14 +147,17 @@
     },
     {
       daynum: '2',
-      title: 'June 29th,',
+      title: 'June 29th',
       activities: [
         {
           name: 'First Peek at Remote Teaching',
           time: '10:00AM - 10:30AM',
           duration: '30',
           actType: 'codealong',
-          links: [],
+          links: [
+            { displayText: 'Sheets', linkURL: 'https://sheets.google.com' },
+            { displayText: 'Docs2', linkURL: 'https://docs2.google.com' },
+          ],
         },
         {
           name: 'BREAK',
@@ -237,7 +240,7 @@
           name: 'Exit Survey',
           time: '05:45PM - 06:00PM',
           duration: '15',
-          actType: 'coreskill',
+          actType: 'survey',
           links: [],
         },
         {
@@ -251,7 +254,7 @@
     },
     {
       daynum: '3',
-      title: 'June 30th,',
+      title: 'June 30th',
       activities: [
         {
           name: 'Team Building',
@@ -334,7 +337,7 @@
           name: 'Exit Survey',
           time: '05:45PM - 06:00PM',
           duration: '15',
-          actType: 'coreskill',
+          actType: 'survey',
           links: [],
         },
         {
@@ -348,7 +351,7 @@
     },
     {
       daynum: '4',
-      title: 'July 1st,',
+      title: 'July 1st',
       activities: [
         {
           name: 'Team Building',
@@ -452,102 +455,102 @@
     },
     {
       daynum: '5',
-      title: 'July 2nd,',
+      title: 'July 2nd',
       activities: [
         {
           name: 'Team Building',
-          time: '10:00AM - 10:30AM',
+          time: '10:30AM - 11:00AM',
           duration: '30',
           actType: 'teambuilding',
           links: [],
         },
         {
           name: 'Exit Survey',
-          time: '10:30AM - 10:45AM',
+          time: '11:00AM - 11:15AM',
           duration: '15',
-          actType: 'coreskill',
+          actType: 'survey',
           links: [],
         },
         {
           name: 'Professional Blind Spot',
-          time: '10:45AM - 11:45AM',
+          time: '11:15AM - 12:15PM',
           duration: '60',
           actType: 'lecture',
           links: [],
         },
         {
           name: 'BREAK',
-          time: '11:45AM - 12:00PM',
+          time: '12:15PM - 12:30PM',
           duration: '15',
           actType: 'misc',
           links: [],
         },
         {
           name: 'Microteaching #2',
-          time: '12:00PM - 01:15PM',
+          time: '12:30PM - 01:45PM',
           duration: '75',
           actType: 'lecture',
           links: [],
         },
         {
           name: 'LUNCH',
-          time: '01:15PM - 02:15PM',
+          time: '01:45PM - 02:45PM',
           duration: '60',
           actType: 'misc',
           links: [],
         },
         {
           name: 'Extrinsic vs. Intrinsic Motivation',
-          time: '02:15PM - 02:45PM',
+          time: '02:45PM - 03:15PM',
           duration: '30',
           actType: 'lecture',
           links: [],
         },
         {
           name: 'Challenge Zone',
-          time: '02:45PM - 03:45PM',
+          time: '03:15PM - 04:15PM',
           duration: '60',
           actType: 'lecture',
           links: [],
         },
         {
           name: 'LI / TA + TF Breakout',
-          time: '03:45PM - 04:15PM',
+          time: '04:15PM - 04:45PM',
           duration: '30',
           actType: 'lecture',
           links: [],
         },
         {
           name: 'BREAK',
-          time: '04:15PM - 04:30PM',
+          time: '04:45PM - 05:00PM',
           duration: '15',
           actType: 'misc',
           links: [],
         },
         {
           name: 'Kahoot!',
-          time: '04:30PM - 05:00PM',
+          time: '05:00PM - 05:30PM',
           duration: '30',
           actType: 'coreskill',
           links: [],
         },
         {
           name: 'Exit Survey',
-          time: '05:00PM - 05:15PM',
+          time: '05:30PM - 05:45PM',
           duration: '15',
-          actType: 'coreskill',
+          actType: 'survey',
           links: [],
         },
         {
           name: 'Closing Statement',
-          time: '05:15PM - 05:30PM',
+          time: '05:45PM - 06:00PM',
           duration: '15',
           actType: 'coreskill',
           links: [],
         },
         {
           name: 'Office Hours',
-          time: '05:30PM - 06:00PM',
+          time: '06:00PM - 06:30PM',
           duration: '30',
           actType: 'officehours',
           links: [],
@@ -561,28 +564,26 @@
   {#each data as day}
     <li>
       <div
-        id={`day-${day.daynum}-header`}
+        id={`LITATF-day-${day.daynum}-header`}
         class="collapsible-header title"
         data-state="closed"
       >
-        <span class="titleFix">{day.title}</span>
+        <span>Day {day.daynum} -</span>
         <span class="dayofWeek"
           >&nbsp;
           {#if day.daynum === '1'}
-            Mon
+            Mon,
           {:else if day.daynum === '2'}
-            Tues
+            Tues,
           {:else if day.daynum === '3'}
-            Weds
+            Weds,
           {:else if day.daynum === '4'}
-            Thurs
+            Thurs,
           {:else if day.daynum === '5'}
-            Fri
+            Fri,
           {/if}
         </span>
-        <span>&nbsp; - Day {day.daynum}</span>
-        <!-- <h2 class="title">
-        </h2> -->
+        <span class="titleFix">&nbsp;{day.title}</span>
       </div>
       <div class="collapsible-body">
         {#each day.activities as activity}
@@ -598,7 +599,7 @@
       </div>
     </li>
   {/each}
-  <li class="all-links">
+  <li class="litatf-all-links all-links">
     <div class="collapsible-header">
       <div class="title">All PD Materials</div>
     </div>
@@ -607,7 +608,11 @@
         {#each data as day}
           {#each day.activities as activity}
             {#if activity.links.length > 0}
-              <AllMatsLink actname={activity.name} links={activity.links} />
+              <AllMatsLink
+                classes={`day${day.daynum}-all-links`}
+                actname={activity.name}
+                links={activity.links}
+              />
             {/if}
           {/each}
         {/each}
