@@ -7,6 +7,11 @@
   let LITATFSchedule: HTMLDivElement;
   let SICSchedule: HTMLDivElement;
 
+  const toggleClassIfFound = (ele: Element, className: string) =>
+    ele.classList.contains(className) ? ele.classList.toggle(className) : null;
+  const toggleClassIfNotFound = (ele: Element, className: string) =>
+    !ele.classList.contains(className) ? ele.classList.toggle(className) : null;
+
   const animateLITATF = () => {
     const allListItems = document.querySelectorAll(
       '#LITATFCont > ul.collapsible > li'
@@ -41,14 +46,17 @@
     const lastChose = window.localStorage.getItem('lastChose');
     if (lastChose !== undefined) {
       if (lastChose === 'LITATF') {
-        LITATFBtn.classList.toggle('chosen');
         animateLITATF();
+        toggleClassIfNotFound(LITATFBtn, 'chosen');
+        toggleClassIfFound(LITATFSchedule, 'hidden');
         return;
       }
       if (lastChose === 'SIC') {
-        SICBtn.classList.toggle('chosen');
-        SICSchedule.classList.toggle('hidden');
-        LITATFSchedule.classList.toggle('hidden');
+        toggleClassIfNotFound(SICBtn, 'chosen');
+        toggleClassIfFound(SICSchedule, 'hidden');
+        toggleClassIfNotFound(LITATFSchedule, 'hidden');
+        // SICSchedule.classList.toggle('hidden');
+        // LITATFSchedule.classList.toggle('hidden');
         animateSIC();
       }
     }
@@ -56,8 +64,10 @@
 
   const LITATFClicked = (e: Event) => {
     if (LITATFSchedule.classList.contains('hidden')) {
-      LITATFSchedule.classList.toggle('hidden');
-      SICSchedule.classList.toggle('hidden');
+      toggleClassIfFound(LITATFSchedule, 'hidden');
+      toggleClassIfNotFound(SICSchedule, 'hidden');
+      // LITATFSchedule.classList.toggle('hidden');
+      // SICSchedule.classList.toggle('hidden');
       window.localStorage.setItem('lastChose', 'LITATF');
       animateLITATF();
       if (!LITATFBtn.classList.contains('chosen')) {
@@ -70,8 +80,10 @@
 
   const SICClicked = (e: Event) => {
     if (SICSchedule.classList.contains('hidden')) {
-      SICSchedule.classList.toggle('hidden');
-      LITATFSchedule.classList.toggle('hidden');
+      // SICSchedule.classList.toggle('hidden');
+      // LITATFSchedule.classList.toggle('hidden');
+      toggleClassIfFound(SICSchedule, 'hidden');
+      toggleClassIfNotFound(LITATFSchedule, 'hidden');
       window.localStorage.setItem('lastChose', 'SIC');
       animateSIC();
       if (!SICBtn.classList.contains('chosen')) {
@@ -115,7 +127,7 @@
     </button>
   </div>
   <ul class="collapsible">
-    <div id="LITATFCont" bind:this={LITATFSchedule}>
+    <div id="LITATFCont" class="hidden" bind:this={LITATFSchedule}>
       <LITATF />
     </div>
     <div id="SICCont" class="hidden" bind:this={SICSchedule}>
