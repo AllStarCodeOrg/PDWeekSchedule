@@ -13,13 +13,30 @@
     );
     anime({
       targets: allListItems,
-      translateY: [250, 0],
-      opacity: [0, 1],
+      clipPath: ['inset(0 0 0 0)', 'inset(0 100% 0 0)'],
+      // keyframes: [
+      //   { clipPath: 'inset(0 0 0 0)' },
+      //   { clipPath: 'inset(0 100% 0 0)' },
+      // ],
+      direction: 'reverse',
       easing: 'easeInOutExpo',
-      duration: 500,
+      duration: 1000,
       delay: anime.stagger(150),
     });
   };
+  // const animateLITATF = () => {
+  //   const allListItems = document.querySelectorAll(
+  //     '#LITATFCont > ul.collapsible > li'
+  //   );
+  //   anime({
+  //     targets: allListItems,
+  //     translateY: [250, 0],
+  //     opacity: [0, 1],
+  //     easing: 'easeInOutExpo',
+  //     duration: 500,
+  //     delay: anime.stagger(150),
+  //   });
+  // };
 
   const animateSIC = () => {
     const allListItems = document.querySelectorAll(
@@ -34,15 +51,19 @@
       delay: anime.stagger(150),
     });
   };
+  let LITATFBtn: HTMLButtonElement;
+  let SICBtn: HTMLButtonElement;
 
   function init() {
     const lastChose = window.localStorage.getItem('lastChose');
     if (lastChose !== undefined) {
       if (lastChose === 'LITATF') {
+        LITATFBtn.classList.toggle('chosen');
         animateLITATF();
         return;
       }
       if (lastChose === 'SIC') {
+        SICBtn.classList.toggle('chosen');
         SICSchedule.classList.toggle('hidden');
         LITATFSchedule.classList.toggle('hidden');
         animateSIC();
@@ -56,6 +77,11 @@
       SICSchedule.classList.toggle('hidden');
       window.localStorage.setItem('lastChose', 'LITATF');
       animateLITATF();
+      if (!LITATFBtn.classList.contains('chosen')) {
+        LITATFBtn.classList.toggle('chosen');
+      }
+      if (SICBtn.classList.contains('chosen'))
+        SICBtn.classList.toggle('chosen');
     }
   };
 
@@ -65,6 +91,11 @@
       LITATFSchedule.classList.toggle('hidden');
       window.localStorage.setItem('lastChose', 'SIC');
       animateSIC();
+      if (!SICBtn.classList.contains('chosen')) {
+        SICBtn.classList.toggle('chosen');
+      }
+      if (LITATFBtn.classList.contains('chosen'))
+        LITATFBtn.classList.toggle('chosen');
     }
   };
 
@@ -75,6 +106,7 @@
 </script>
 
 <main class="container">
+  <div id="anchor" />
   <div class="row">
     <div class="col s12 center">
       <div class="title mainheader">
@@ -83,15 +115,21 @@
       </div>
     </div>
   </div>
-  <!-- <div class="click-text center">Click the buttons below to get your schedule</div> -->
   <div class="button-cont">
     <button
-      class="waves-effect waves-light btn btn-large"
-      on:click={LITATFClicked}>LI/TA/TF Schedule</button
+      class="waves-effect waves-light btn btn-large schedule-btn"
+      on:click={LITATFClicked}
+      bind:this={LITATFBtn}
     >
-    <button class="waves-effect waves-light btn btn-large" on:click={SICClicked}
-      >SIC schedule</button
+      LI/TA/TF Schedule
+    </button>
+    <button
+      class="waves-effect waves-light btn btn-large schedule-btn"
+      on:click={SICClicked}
+      bind:this={SICBtn}
     >
+      SIC schedule
+    </button>
   </div>
   <ul class="collapsible">
     <div id="LITATFCont" bind:this={LITATFSchedule}>
@@ -101,4 +139,12 @@
       <SIC />
     </div>
   </ul>
+  <button
+    id="scrollToTop"
+    class="waves-effect waves-light btn btn-medium"
+    on:click={() =>
+      document.getElementById('anchor').scrollIntoView({ behavior: 'smooth' })}
+  >
+    back to top
+  </button>
 </main>
