@@ -261,7 +261,10 @@
           time: '10:00AM - 10:30AM',
           duration: '30',
           actType: 'teambuilding',
-          links: [],
+          links: [
+            { displayText: 'Slides', linkURL: 'https://slides.google.com' },
+            { displayText: 'Docs', linkURL: 'https://docs.google.com' },
+          ],
         },
         {
           name: 'BREAK',
@@ -358,7 +361,10 @@
           time: '10:00AM - 10:30AM',
           duration: '30',
           actType: 'teambuilding',
-          links: [],
+          links: [
+            { displayText: 'Slides', linkURL: 'https://slides.google.com' },
+            { displayText: 'Docs', linkURL: 'https://docs.google.com' },
+          ],
         },
         {
           name: 'BREAK',
@@ -462,7 +468,10 @@
           time: '10:30AM - 11:00AM',
           duration: '30',
           actType: 'teambuilding',
-          links: [],
+          links: [
+            { displayText: 'Slides', linkURL: 'https://slides.google.com' },
+            { displayText: 'Docs', linkURL: 'https://docs.google.com' },
+          ],
         },
         {
           name: 'Exit Survey',

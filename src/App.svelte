@@ -55,8 +55,6 @@
         toggleClassIfNotFound(SICBtn, 'chosen');
         toggleClassIfFound(SICSchedule, 'hidden');
         toggleClassIfNotFound(LITATFSchedule, 'hidden');
-        // SICSchedule.classList.toggle('hidden');
-        // LITATFSchedule.classList.toggle('hidden');
         animateSIC();
       }
     }
@@ -66,8 +64,6 @@
     if (LITATFSchedule.classList.contains('hidden')) {
       toggleClassIfFound(LITATFSchedule, 'hidden');
       toggleClassIfNotFound(SICSchedule, 'hidden');
-      // LITATFSchedule.classList.toggle('hidden');
-      // SICSchedule.classList.toggle('hidden');
       window.localStorage.setItem('lastChose', 'LITATF');
       animateLITATF();
       if (!LITATFBtn.classList.contains('chosen')) {
@@ -80,8 +76,6 @@
 
   const SICClicked = (e: Event) => {
     if (SICSchedule.classList.contains('hidden')) {
-      // SICSchedule.classList.toggle('hidden');
-      // LITATFSchedule.classList.toggle('hidden');
       toggleClassIfFound(SICSchedule, 'hidden');
       toggleClassIfNotFound(LITATFSchedule, 'hidden');
       window.localStorage.setItem('lastChose', 'SIC');
