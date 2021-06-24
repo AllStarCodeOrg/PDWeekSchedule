@@ -13,8 +13,11 @@
           duration: '15',
           actType: 'coreskill',
           links: [
-            { displayText: 'Slides', linkURL: 'https://slides.google.com' },
-            { displayText: 'Docs', linkURL: 'https://docs.google.com' },
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/193NgSXQrduiCDqnKJKLbFtp0BGSXyu1TYyRnO4Frkc8/edit?usp=sharing',
+            },
           ],
         },
         {
@@ -22,7 +25,13 @@
           time: '10:15AM - 10:30AM',
           duration: '15',
           actType: 'coreskill',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/193NgSXQrduiCDqnKJKLbFtp0BGSXyu1TYyRnO4Frkc8/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'Meet your Team',
@@ -43,14 +52,26 @@
           time: '11:15AM - 11:30AM',
           duration: '15',
           actType: 'coreskill',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/1wj68jL-ZYP1YzZNsgI7ZTlkLDcn2teNqum2XVAAUt7M/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'Preview of the Summer Intensive Program',
           time: '11:30AM - 11:45AM',
           duration: '15',
           actType: 'coreskill',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/1uFVd5LGADLVBmFz4Ihif2tVp9WcAS90s_cbdYIOQfRs/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'BREAK',
@@ -60,18 +81,30 @@
           links: [],
         },
         {
-          name: 'Classroom Roles',
+          name: 'Roles and Responsibilities',
           time: '12:00PM - 12:30PM',
           duration: '30',
           actType: 'coreskill',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/1aiYgg0FxW6Q9PZJ0suDtmy3fMe6q6PBXwObFxLU2rBs/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'Human Resources (Operations)',
           time: '12:30PM - 01:00PM',
           duration: '30',
           actType: 'coreskill',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/1TNeIUOxhvI_6z6sS5vHrIg9-Ti1Twj1OeWl3Vcvl_Vk/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'LUNCH',
@@ -92,7 +125,12 @@
           time: '02:30PM - 03:00PM',
           duration: '30',
           actType: 'coreskill',
-          links: [],
+          links: [
+            {
+              displayText: 'ASC Learning Management System',
+              linkURL: 'http://learning.allstarcode.org/',
+            },
+          ],
         },
         {
           name: 'BREAK',
@@ -106,14 +144,25 @@
           time: '03:15PM - 03:45PM',
           duration: '30',
           actType: 'coreskill',
-          links: [],
+          links: [
+            {
+              displayText: 'ASC Learning Management System',
+              linkURL: 'http://learning.allstarcode.org/',
+            },
+          ],
         },
         {
           name: 'Orientation Intro',
           time: '03:45PM - 04:00PM',
           duration: '15',
           actType: 'project',
-          links: [],
+          links: [
+            {
+              displayText: 'Run of Show',
+              linkURL:
+                'https://docs.google.com/document/d/102iIOo5rV7x8EL3nfC6n0J-jMGcqHuNX6RKlkR-I4SI/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'BREAK',
@@ -127,7 +176,13 @@
           time: '04:15PM - 05:15PM',
           duration: '60',
           actType: 'coreskill',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/1Y1o0JetV1_uroe_rWObQwtKGAwvqnUSE3eJVWB11Ans/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'Exit Survey',
@@ -154,10 +209,7 @@
           time: '10:00AM - 10:30AM',
           duration: '30',
           actType: 'codealong',
-          links: [
-            { displayText: 'Sheets', linkURL: 'https://sheets.google.com' },
-            { displayText: 'Docs2', linkURL: 'https://docs2.google.com' },
-          ],
+          links: [],
         },
         {
           name: 'BREAK',
@@ -192,7 +244,13 @@
           time: '12:30PM - 01:00PM',
           duration: '30',
           actType: 'coreskill',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/1xXHFVDr3IaWPyGLjpHc2CjHp3GqakkdqFFulX46ohRY/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'LUNCH',
@@ -206,21 +264,39 @@
           time: '02:00PM - 02:30PM',
           duration: '30',
           actType: 'coreskill',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/1wx0mPyg1L-Csn3SHXa3X7l1csSidvWvLseQEjyPY1dg/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'Overall Onboarding',
           time: '02:30PM - 03:30PM',
           duration: '60',
           actType: 'lecture',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/1eLq7z8coFmy3rDwXAgpxpJbhY4OMR8ATLHtOTXiGJw0/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'Tools for the Job',
           time: '03:30PM - 04:30PM',
           duration: '60',
           actType: 'lecture',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/14r038ckVsPD7Ag0W2U8RqYtK8V71m-P9Xa7wCFoqJAE/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'BREAK',
@@ -310,7 +386,13 @@
           time: '02:30PM - 03:00PM',
           duration: '30',
           actType: 'project',
-          links: [],
+          links: [
+            {
+              displayText: 'Orientation Deck',
+              linkURL:
+                'https://docs.google.com/presentation/d/1mMZuKIoetTeu_3ncbmyY-D_0w2Cf91B2ZXXxSQ17rbg/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'Orientation Prep',
@@ -331,7 +413,23 @@
           time: '04:45PM - 05:45PM',
           duration: '60',
           actType: 'coreskill',
-          links: [],
+          links: [
+            {
+              displayText: 'Incoming Instructors Forum #1',
+              linkURL:
+                'https://docs.google.com/document/d/12zdyePDCxTUgyy3vgX9wQn8gYGQhm6SvK3am9lt_-Tk/edit?usp=sharing',
+            },
+            {
+              displayText: 'Incoming Instructors Forum #2',
+              linkURL:
+                'https://docs.google.com/document/d/1PV60_qCT0OZLwBxo22qwHbZipc505g_fAWFdJUxPI0c/edit?usp=sharing',
+            },
+            {
+              displayText: 'Returning Instructors Forum',
+              linkURL:
+                'https://docs.google.com/document/d/14wWSMM_lQqfn166UyIIpnGZ1I5IW5XyOAMG43YVExQo/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'Exit Survey',
@@ -410,18 +508,30 @@
           links: [],
         },
         {
-          name: 'Culturally Relevant Pedagogy',
-          time: '03:15PM - 03:45PM',
-          duration: '30',
-          actType: 'coreskill',
-          links: [],
-        },
-        {
           name: 'Scholar Services',
-          time: '03:45PM - 04:00PM',
+          time: '03:15PM - 03:30PM',
           duration: '15',
           actType: 'coreskill',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/1n0pJB2kMzDxd_FLxYFYOmghFjHn7urEouDFC3SXM3Us/edit?usp=sharing',
+            },
+          ],
+        },
+        {
+          name: 'Deficit vs. Asset-Based Approach',
+          time: '03:30PM - 04:00PM',
+          duration: '30',
+          actType: 'coreskill',
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/12Djq8SV1oyDk4ExBgKOkhB0IwKjQ-ZjFSZwfwPu9Fgg/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'Orientation Prep',
@@ -483,7 +593,13 @@
           time: '12:30PM - 01:45PM',
           duration: '75',
           actType: 'lecture',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/18kRJREH6T-tRXL5QqZS6kyy_Uy1i0bjRG5-i4f9UNu0/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'LUNCH',
@@ -493,7 +609,7 @@
           links: [],
         },
         {
-          name: 'Intersectionality w/ Rhona (Concentration)',
+          name: 'Intersectionality w/ Lakimja (Concentration)',
           time: '02:45PM - 03:45PM',
           duration: '60',
           actType: 'lecture',
@@ -504,7 +620,13 @@
           time: '03:45PM - 04:15PM',
           duration: '30',
           actType: 'lecture',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://docs.google.com/presentation/d/16Br5RmzejpY1QrqQJbl2swvwHrRhmA2WHVbEk2ZlT2Y/edit?usp=sharing',
+            },
+          ],
         },
         {
           name: 'Final Q&A',
@@ -525,7 +647,7 @@
           time: '05:00PM - 05:30PM',
           duration: '30',
           actType: 'coreskill',
-          links: [],
+          links: [{ displayText: 'Join here', linkURL: 'https://kahoot.it/' }],
         },
         {
           name: 'Exit Survey',
