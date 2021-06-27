@@ -209,7 +209,13 @@
           time: '10:00AM - 10:30AM',
           duration: '30',
           actType: 'codealong',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://drive.google.com/file/d/1wrHLUdWNBdZj85HL6wmVFyRQCA6dWmzs/view?usp=sharing',
+            },
+          ],
         },
         {
           name: 'BREAK',
@@ -223,7 +229,13 @@
           time: '10:45AM - 11:45AM',
           duration: '60',
           actType: 'codealong',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://drive.google.com/file/d/1wrHLUdWNBdZj85HL6wmVFyRQCA6dWmzs/view?usp=sharing',
+            },
+          ],
         },
         {
           name: 'BREAK',
