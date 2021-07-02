@@ -496,7 +496,13 @@
           time: '12:00PM - 01:00PM',
           duration: '60',
           actType: 'codealong',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://drive.google.com/file/d/1S_8XJcB8bJ9LuMB6FofmwSYkrT45rpFc/view?usp=sharing',
+            },
+          ],
         },
         {
           name: 'LUNCH',
@@ -510,7 +516,13 @@
           time: '02:00PM - 03:00PM',
           duration: '60',
           actType: 'codealong',
-          links: [],
+          links: [
+            {
+              displayText: 'Presentation Slides',
+              linkURL:
+                'https://drive.google.com/file/d/1S_8XJcB8bJ9LuMB6FofmwSYkrT45rpFc/view?usp=sharing',
+            },
+          ],
         },
         {
           name: 'BREAK',
